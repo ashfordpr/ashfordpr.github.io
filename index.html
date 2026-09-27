@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ASHFORD — Public Relations & Brand Communications</title>
+
+    <meta name="description"
+          content="ASHFORD is a public relations and brand communications agency helping ambitious brands build visibility, influence and reputation.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f3ee;
+            color: #111111;
+            line-height: 1.5;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(245, 243, 238, 0.92);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            letter-spacing: 5px;
+        }
+
+        nav a {
+            color: #111;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 150px 8% 80px;
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(70px, 13vw, 180px);
+            font-weight: 400;
+            letter-spacing: -6px;
+            line-height: 0.85;
+        }
+
+        .hero-subtitle {
+            max-width: 600px;
+            margin-top: 45px;
+            font-family: Georgia, serif;
+            font-size: clamp(22px, 3vw, 38px);
+            line-height: 1.2;
+        }
+
+        .hero-bottom {
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+        }
+
+        .hero-bottom p {
+            max-width: 430px;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            border: 1px solid #111;
+            color: #111;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #111;
+            color: #f5f3ee;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 130px 8%;
+        }
+
+        .section-label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .about {
+            border-top: 1px solid #ccc;
+        }
+
+        .about-text {
+            max-width: 950px;
+            font-family: Georgia, serif;
+            font-size: clamp(35px, 5vw, 65px);
+            line-height: 1.1;
+        }
+
+        /* SERVICES */
+
+        .services {
+            background: #111;
+            color: #f5f3ee;
+        }
+
+        .services .section-label {
+            color: #aaa;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+        }
+
+        .service {
+            padding: 45px 20px 45px 0;
+            border-top: 1px solid #444;
+        }
+
+        .service:nth-child(even) {
+            padding-left: 30px;
+            border-left: 1px solid #444;
+        }
+
+        .service-number {
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 30px;
+        }
+
+        .service h3 {
+            font-family: Georgia, serif;
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        .service p {
+            color: #aaa;
+            max-width: 400px;
+        }
+
+        /* APPROACH */
+
+        .approach {
+            border-top: 1px solid #ccc;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .approach h2 {
+            font-family: Georgia, serif;
+            font-size: clamp(40px, 5vw, 70px);
+            font-weight: 400;
+            line-height: 1;
+        }
+
+        .approach p {
+            font-size: 17px;
+            color: #555;
+            max-width: 550px;
+        }
+
+        /* CTA */
+
+        .cta {
+            background: #dedbd3;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-family: Georgia, serif;
+            font-size: clamp(45px, 7vw, 90px);
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 40px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111;
+            color: #f5f3ee;
+            padding: 70px 8% 35px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-logo {
+            font-family: Georgia, serif;
+            font-size: 40px;
+            letter-spacing: 6px;
+        }
+
+        .footer-links a {
+            display: block;
+            color: #aaa;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        .copyright {
+            margin-top: 80px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #777;
+            font-size: 11px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 20px;
+            }
+
+            nav .links {
+                display: none;
+            }
+
+            .hero {
+                padding: 140px 25px 70px;
+            }
+
+            h1 {
+                font-size: 75px;
+                letter-spacing: -4px;
+            }
+
+            section {
+                padding: 90px 25px;
+            }
+
+            .hero-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 30px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service:nth-child(even) {
+                padding-left: 0;
+                border-left: none;
+            }
+
+            .approach-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-top {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="logo">ASHFORD</div>
+
+    <div class="links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="eyebrow">
+        Public Relations & Brand Communications
+    </div>
+
+    <h1>ASHFORD</h1>
+
+    <div class="hero-subtitle">
+        We build brands<br>
+        worth talking about.
+    </div>
+
+    <div class="hero-bottom">
+
+        <p>
+            Strategic public relations, influence and brand
+            communications for ambitious brands ready to be seen.
+        </p>
+
+        <a class="button" href="#contact">
+            Start a conversation
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="section-label">
+        01 — About Ashford
+    </div>
+
+    <div class="about-text">
+        Ashford is a modern communications agency
+        creating meaningful visibility for brands,
+        founders and ideas that deserve attention.
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="section-label">
+        02 — Services
+    </div>
+
+    <div class="service-grid">
+
+        <div class="service">
+            <div class="service-number">01</div>
+            <h3>Public Relations</h3>
+            <p>
+                Strategic media relations and communications
+                designed to build credibility and awareness.
+            </p>
+        </div>
+
+        <div class="service">
+            <div class="service-number">02</div>
+            <h3>Influencer Relations</h3>
+            <p>
+                Connecting brands with relevant creators and
+                voices to create authentic cultural influence.
+            </p>
+        </div>
+
+        <div class="service">
+            <div class="service-number">03</div>
+            <h3>Brand Strategy</h3>
+            <p>
+                Positioning, messaging and communication
+                strategies that give brands a distinctive voice.
+            </p>
+        </div>
+
+        <div class="service">
+            <div class="service-number">04</div>
+            <h3>Launch Campaigns</h3>
+            <p>
+                Building attention around new products,
+                businesses, campaigns and important moments.
+            </p>
+        </div>
+
+        <div class="service">
+            <div class="service-number">05</div>
+            <h3>Founder Branding</h3>
+            <p>
+                Building credible public profiles for founders,
+                entrepreneurs and industry leaders.
+            </p>
+        </div>
+
+        <div class="service">
+            <div class="service-number">06</div>
+            <h3>Social Influence</h3>
+            <p>
+                Creative social campaigns designed to turn
+                attention into lasting brand recognition.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- APPROACH -->
+
+<section class="approach" id="approach">
+
+    <div class="section-label">
+        03 — Our Approach
+    </div>
+
+    <div class="approach-grid">
+
+        <h2>
+            Attention is valuable.
+            <br>
+            Relevance is everything.
+        </h2>
+
+        <p>
+            We believe great communication is more than
+            getting noticed. It is about creating the right
+            conversation, with the right people, at the right
+            moment.
+
+            <br><br>
+
+            Ashford combines strategic thinking, cultural
+            awareness and creative communication to help
+            ambitious brands become part of the conversation.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="cta" id="contact">
+
+    <div class="section-label">
+        04 — Contact
+    </div>
+
+    <h2>
+        Let's make<br>
+        something matter.
+    </h2>
+
+    <a class="button" href="mailto:hello@ashfordpr.com">
+        Get in touch
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div class="footer-logo">
+            ASHFORD
+        </div>
+
+        <div class="footer-links">
+
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#approach">Approach</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 ASHFORD. All rights reserved.
+    </div>
+
+</footer>
+
+</body>
+</html>
