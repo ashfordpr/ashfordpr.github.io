@@ -438,6 +438,25 @@ footer {
         width: 55px;
         height: auto;
     }
+    .nav-links {
+    display: none;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #111;
+}
 
     .nav-links {
         gap: 18px;
@@ -476,7 +495,11 @@ footer {
     <a href="#" class="logo">
     <img src="ChatGPT Image Sep 27, 2026, 07_31_26 PM.png" alt="ASHFORD">
 </a>
-
+<button class="menu-toggle" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
     <div class="nav-links">
         <a href="#about">About</a>
         <a href="#services">Services</a>
