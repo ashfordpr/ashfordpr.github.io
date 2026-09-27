@@ -58,10 +58,15 @@ a {
 }
 
 .logo {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 32px;
-    letter-spacing: 5px;
-    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
 }
 
 .nav-links {
@@ -330,9 +335,18 @@ footer {
 }
 
 .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     font-family: "Cormorant Garamond", serif;
     font-size: 55px;
     letter-spacing: 7px;
+}
+
+.footer-logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
 }
 
 .footer-bottom {
@@ -419,7 +433,9 @@ footer {
 
 <nav class="nav">
 
-    <div class="logo">ASHFORD</div>
+    <a href="#" class="logo">
+    <img src="ashford-logo.png" alt="ASHFORD">
+</a>
 
     <div class="nav-links">
         <a href="#about">About</a>
@@ -688,9 +704,10 @@ footer {
 
 <footer>
 
-    <div class="footer-logo">
-        ASHFORD
-    </div>
+   <div class="footer-logo">
+    <img src="ashford-logo.png" alt="ASHFORD">
+    <span>ASHFORD</span>
+</div>
 
     <div class="footer-bottom">
 
